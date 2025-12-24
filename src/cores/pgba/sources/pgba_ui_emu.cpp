@@ -44,7 +44,7 @@ int PGBAUiEmu::load(const ss_api::Game &game) {
     s_core = mCoreFind(path.c_str());
     if (!s_core) {
         getUi()->getUiProgressBox()->setVisibility(Visibility::Hidden);
-        getUi()->getUiMessageBox()->show("ERROR", "INVALID ROM FILE", "OK");
+        getUi()->getUiMessageBox()->show("ERROR", "INVALID ROM FILE 2", "OK");
         return -1;
     }
 
@@ -119,7 +119,7 @@ int PGBAUiEmu::load(const ss_api::Game &game) {
     // load rom
     if (!mCoreLoadFile(s_core, path.c_str())) {
         getUi()->getUiProgressBox()->setVisibility(Visibility::Hidden);
-        getUi()->getUiMessageBox()->show("ERROR", "INVALID ROM FILE", "OK");
+        getUi()->getUiMessageBox()->show("ERROR", "INVALID ROM FILE 1", "OK");
         return -1;
     }
 
